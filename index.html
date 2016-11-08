@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+  <title>Tu Bhi Nachle</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="shortcut icon" href="pic/tab_Icon.PNG">
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css" />
+	
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/cycle2.min.js"></script>
+
+
+<style type="text/css">
+	.Title 
+	{
+		text-align: center;
+    	color: DimGray;
+    	padding: 10px;
+    	font: bold 16vh Helvetica;
+    	letter-spacing: 20px;
+    }
+	.blur span 
+	{
+    	-webkit-transition: all 0.9s ease;
+    	-moz-transition:    all 0.9s ease;
+    	-o-transition:      all 0.9s ease;
+    	transition:         all 0.9s ease;
+    }
+    .blur span:hover 
+    {
+    	text-shadow: 0 0 72px black;
+    	color: transparent;
+    	-webkit-transition: all 0.2s ease;
+    	-moz-transition:    all 0.2s ease;
+    	-o-transition:      all 0.2s ease;
+    	transition:         all 0.2s ease;
+    }
+    .imgBlur:hover 
+    {   
+		width: 100%;
+		-webkit-transition: all .2s ease;
+    	-moz-transition: all .2s ease;
+    	-o-transition: all .2s ease;
+    	-ms-transition: all .2s ease;
+        transition: all .2s ease;
+    
+        filter: blur(0);
+		-webkit-filter: blur(0);
+		-moz-filter: blur(0);
+		-o-filter: blur(0);
+		-ms-filter: blur(0);  
+    	-ms-filter: blur(0px);
+		cursor:pointer;
+	}
+	.imgBlur 
+	{
+    	width: 100%;
+    
+    	filter: blur(3px);
+		-webkit-filter: blur(5px);
+		-moz-filter: blur(5px);
+		-o-filter: blur(5px);
+		-ms-filter: blur(5px);
+    	filter: url(#blur1);
+	}
+	body 
+	{
+		
+		background-color:#101010;    
+	}
+	.navBar 
+	{
+		overflow: scroll;
+		height: 99.5vh;
+		background-color:#ffffff;
+		border-radius: 15px 0px 0px 15px;
+	}
+	.mainBody 
+	{
+		overflow: scroll;
+		height: 99.5vh;
+		background-color:white;
+		border-radius: 0px 0px 0px 0px;
+	}
+	.mybutton
+	{
+		width: 100%;
+		background-color:#600493;
+		font-size: 25px;
+		padding: 10px;
+		text-align: center;
+		color: white;
+		opacity: 0.75;
+	}
+	.mybutton:hover
+	{
+		height: 50%;
+		width: 100%;
+		padding: 20px;
+		background-color: lightGray;
+		text-align: center;
+		font-weight: bold;
+		color: black;
+		cursor:pointer;
+		opacity: 0.9;
+	}
+	.mybuttonRnd
+	{
+		width: 100%;
+		background-color:#32bee1;
+		font-size: 1.25vw;
+		padding: 10px;
+		text-align: center;
+		color: white;
+		opacity: 0.75;
+		border-radius: 15px 15px 15px 15px;
+	}
+	.mybuttonRnd:hover
+	{
+		width: 100%;
+		padding: 20px;
+		text-align: center;
+		font-weight: bold;
+		color: white;
+		cursor:pointer;
+		opacity: 0.95;
+		border-radius: 15px 15px 15px 15px;
+	}
+</style>
+</head>
+
+<body onload="start_up()" style="overflow: hidden;">
+
+<!--===================================-->
+<!--This is if its greater than 700 pixels-->
+<div class=" " >
+<!--==========================-->
+<!--This is the Navigation Bar-->
+<div class="col-xs-3" style=" padding:.25vh;">
+	<div class="mCustomScrollbar navBar" data-mcs-axis="y" data-mcs-theme="minimal-dark" style="background:#303030;">
+
+		<h1 class="text-left" style="font-size:10vw; color:#8745B0;">T<small>u</small></h1>
+		<h1 class="text-left" style="font-size:9vw; color:#8745B0;">B<small>hi</small></h1>
+		<h1 class="text-left" style="font-size:9vw; color:#8745B0;">N<small>achle</small></h1>
+
+		<h1 class="text-left" style="font-size:2vw; color:#A573C4;">George Mason University's first ever Fusion and Classical Dance Competition</h1>
+
+		<div style="padding:5vh;"></div>
+		<div style="padding:.2vh;">
+			<div class="mybutton" onclick="showHidden('#page1')" style="">Home</div>
+		</div>
+		<div style="padding:.2vh;">
+			<div class="mybutton" onclick="showHidden('#page2')" style="">About Us</div>
+		</div>
+		<div style="padding:.2vh;">
+			<div class="mybutton" onclick="showHidden('#page3')" style="">Board</div>
+		</div>
+		<div style="padding:.2vh;">
+			<div class="mybutton" onclick="showHidden('#page4')" style="">Teams</div>
+		</div>
+		<div style="padding:.2vh;">
+			<div class="mybutton" onclick="showHidden('#page5')" style="">Apply</div>
+		</div>
+		<div style="padding:5vh;"></div>
+
+		<img src="pic/Icon.png" class=" " style="width:100%; padding:25px"/>
+
+		<h1 class="text-center" style="font-size:2vw; color:#606060;">"Some fancy Quote to make me look smart"</h1>
+	</div>
+</div>
+<!--=====================-->
+<!--This is the Main Body-->
+<div class="col-xs-9 " style=" padding:.25vh; ">
+	<div class="mCustomScrollbar mainBody" data-mcs-axis="y" data-mcs-theme="minimal-dark" style="">
+
+	<!--=====================-->
+	<!--The first Page-->	
+	<div class="col-xs-12 row" id="page1" style="background-color:#404040; min-height:99.5vh;">
+
+		<div class="col-xs-6" style="background:#404040; padding: .5vh .5vh .5vh .5vh">
+			<img class="imgBlur" style="width:100%; height: 30vh;" src="pic/home1.jpg">
+		</div>
+		<div class="col-xs-6" style="background:#404040; padding: .5vh .5vh .5vh .5vh">
+			<img class="imgBlur" style="width:100%; height: 30vh;" src="pic/home3.jpg">
+		</div>
+		<div class="col-xs-4" id="J_box" style="height: 30vh;padding: 10vh 2vh 2vh 2vh">
+			<div class="" style="color:#8745B0; font-size: 4em;"><b style="letter-spacing: 20px;">Learn</b></div>
+		</div>
+		<div class="col-xs-8" style="background:#404040; padding: .5vh .5vh .5vh .5vh">
+			<img class="imgBlur" style="width:100%; height: 30vh;" src="pic/home2.jpg">
+		</div>
+		<div class="col-xs-8" style="background:#404040; padding: .5vh .5vh .5vh .5vh">
+			<img class="imgBlur" style="width:100%; height: 30vh;" src="pic/home2.jpg">
+		</div>
+		<div class="col-xs-4" id="J_box" style="height: 31vh;padding: 10vh 2vh 2vh 2vh">
+			<div class="" style="color:#8745B0; font-size: 4em;"><b style="letter-spacing: 20px;">Love</b></div>
+		</div>
+		<div class="col-xs-4" style="background:#404040; padding: .5vh .5vh .5vh .5vh">
+			<img class="imgBlur" style="width:100%; height: 20vh;" src="pic/home1.jpg">
+		</div>
+		<div class="col-xs-4" id="J_box" style="height: 20vh;padding: 7.5vh 2vh 2vh 2vh">
+			<div class="" style="color:#8745B0; font-size: 4em;"><b style="letter-spacing: 30px;">Live</b></div>
+		</div>
+		<div class="col-xs-4" style="background:#404040; padding: .5vh .5vh .5vh .5vh">
+			<img class="imgBlur" style="width:100%; height: 20vh;" src="pic/home3.jpg">
+		</div>
+
+		<div class="col-xs-12" style="padding: 3vh;"></div>
+
+		<div class="blur Title col-xs-12" style="color:#808080; font-size: 10vw;">
+				<span>D</span><span>A</span><span>N</span><span>C</span><span>E</span>
+		</div>
+	</div>
+
+	<!--=====================-->
+	<!--The second Page-->
+	<div class="col-sm-12" id="page2" style="background-color:#606060; min-height:99.5vh;">
+		<!--=====================-->
+		<!--This is the title-->
+		<div class="col-sm-12">
+			<div class="blur Title" style="color:#808080; font-size: 6vw;">
+				<span>A</span><span>b</span><span>o</span><span>u</span><span>t</span><span>U</span><span>s</span>
+			</div>
+		</div>
+		<!--=====================-->
+		<!--My Projects Icon-->
+		<div class="col-xs-12" style="background:#404040; padding: .5vh .5vh .5vh .5vh">
+			<img class="imgBlur" style="width:100%; height: 100%;" src="pic/group.jpg">
+		</div>
+	</div>
+
+	<!--=====================-->
+	<!--The third Page-->
+	<div class="col-sm-12" id="page3" style="background-color:#bbbbbb; min-height:99.5vh;">
+		<div class="col-sm-12">
+			<div class="blur Title" style="color:#808080; font-size: 6vw;">
+				<span>W</span><span>O</span><span>R</span><span>K</span>
+			</div>
+			<div class="blur Title" style="color:#656565; font-size: 3vw;">
+				<span>I</span><span>N</span>
+			</div>
+			<div class="blur Title" style="color:#505050; font-size: 8vw;">
+				<span>P</span><span>R</span><span>O</span><span>G</span><span>R</span><span>E</span><span>S</span><span>S</span>
+			</div>
+		</div>
+	</div>
+	<div class="col-sm-12" id="page4" style="background-color:#303030; min-height:99.5vh;">
+		<div class="col-sm-12">
+			<div class="blur Title" style="color:#808080; font-size: 6vw;">
+				<span>W</span><span>O</span><span>R</span><span>K</span>
+			</div>
+			<div class="blur Title" style="color:#656565; font-size: 3vw;">
+				<span>I</span><span>N</span>
+			</div>
+			<div class="blur Title" style="color:#505050; font-size: 8vw;">
+				<span>P</span><span>R</span><span>O</span><span>G</span><span>R</span><span>E</span><span>S</span><span>S</span>
+			</div>
+		</div>
+    	<div class="col-xs-4 cycle-slideshow btn" data-cycle-fx=fadeout data-cycle-timeout=1100
+    	data-cycle-pause-on-hover="true">
+    		<img src="pic/8.jpg" style="width:100%;">
+    		<img src="pic/1.jpg" style="width:100%;">
+    		<img src="pic/2.jpg" style="width:100%;">
+    	</div>
+    	<div class="col-xs-4 cycle-slideshow btn" data-cycle-fx=fadeout data-cycle-timeout=1100
+    	data-cycle-pause-on-hover="true">
+    		<img src="pic/3.jpg" style="width:100%;">
+    		<img src="pic/4.jpg" style="width:100%;">
+    		<img src="pic/5.jpg" style="width:100%;">
+    	</div>
+    	<div class="col-xs-4 cycle-slideshow btn" data-cycle-fx=fadeout data-cycle-timeout=1100
+    	data-cycle-pause-on-hover="true">
+    		<img src="pic/6.jpg" style="width:100%;">
+    		<img src="pic/7.jpg" style="width:100%;">
+    		<img src="pic/8.jpg" style="width:100%;">
+    	</div>
+
+    	<div class="col-sm-12" style="padding:6px"> </div>
+
+    	<div class="col-xs-4 cycle-slideshow btn" data-cycle-fx=fadeout data-cycle-timeout=1100
+    	data-cycle-pause-on-hover="true">
+    		<img src="pic/1.jpg" style="width:100%;">
+    		<img src="pic/2.jpg" style="width:100%;">
+    		<img src="pic/3.jpg" style="width:100%;">
+    	</div>
+    	<div class="col-xs-4 cycle-slideshow btn" data-cycle-fx=fadeout data-cycle-timeout=1100
+    	data-cycle-pause-on-hover="true">
+    		<img src="pic/4.jpg" style="width:100%;">
+    		<img src="pic/5.jpg" style="width:100%;">
+    		<img src="pic/6.jpg" style="width:100%;">
+    	</div>
+    	<div class="col-xs-4 cycle-slideshow btn" data-cycle-fx=fadeout data-cycle-timeout=1100
+    	data-cycle-pause-on-hover="true">
+    		<img src="pic/7.jpg" style="width:100%;">
+    		<img src="pic/8.jpg" style="width:100%;">
+    		<img src="pic/1.jpg" style="width:100%;">
+    	</div>
+    	
+    	<div class="col-sm-12" style="padding:6px"> </div>
+
+    	<div class="col-xs-4 cycle-slideshow btn" data-cycle-fx=fadeout data-cycle-timeout=1100
+    	data-cycle-pause-on-hover="true">
+    		<img src="pic/1.jpg" style="width:100%;">
+    		<img src="pic/2.jpg" style="width:100%;">
+    		<img src="pic/3.jpg" style="width:100%;">
+    	</div>
+    	<div class="col-xs-4 cycle-slideshow btn" data-cycle-fx=fadeout data-cycle-timeout=1100
+    	data-cycle-pause-on-hover="true">
+    		<img src="pic/4.jpg" style="width:100%;">
+    		<img src="pic/5.jpg" style="width:100%;">
+    		<img src="pic/6.jpg" style="width:100%;">
+    	</div>
+    	<div class="col-xs-4 cycle-slideshow btn" data-cycle-fx=fadeout data-cycle-timeout=1100
+    	data-cycle-pause-on-hover="true">
+    		<img src="pic/7.jpg" style="width:100%;">
+    		<img src="pic/8.jpg" style="width:100%;">
+    		<img src="pic/1.jpg" style="width:100%;">
+    	</div>
+	</div>
+	<div class="col-sm-12" id="page5" style="background-color:#303030; min-height:99.5vh;">
+
+		<div class="col-sm-12">
+			<div class="blur Title" style="color:#808080; font-size: 6vw;">
+				<span>W</span><span>O</span><span>R</span><span>K</span>
+			</div>
+			<div class="blur Title" style="color:#656565; font-size: 3vw;">
+				<span>I</span><span>N</span>
+			</div>
+			<div class="blur Title" style="color:#505050; font-size: 8vw;">
+				<span>P</span><span>R</span><span>O</span><span>G</span><span>R</span><span>E</span><span>S</span><span>S</span>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!--This is if its less than 700 pixels-->
+<div class="visible-xs-* hidden-sm  hidden-md hidden-lg">
+
+</div>
+
+
+<script type="text/javascript">
+	var curVis='#page1';
+
+	function start_up()
+	{
+		$('#page2').hide();
+		$('#page3').hide();
+		$('#page4').hide();
+		$('#page5').hide();
+
+	}
+	function showHidden(theId)
+	{
+		if(curVis!=null && curVis!=theId)
+		{
+			functionRunning=true;
+			$(curVis).fadeOut(250);
+			$(theId).fadeIn(250);
+			curVis=theId;
+		}		
+	}
+
+	function showInfo(theId,mouseMovement)
+	{
+		if(mouseMovement=="enter")
+		{
+			$("#"+theId).css("visibility","visible");
+		}else if(mouseMovement=="leave"){
+			$("#"+theId).css("visibility","hidden" );
+		}
+	}
+</script>
+
+</body>
+</html>

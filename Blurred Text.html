@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<!-- saved from url=(0044)https://css-tricks.com/examples/BlurredText/ -->
+<html lang="en" class=" js flexbox canvas canvastext webgl no-touch geolocation postmessage websqldatabase indexeddb hashchange history draganddrop websockets rgba hsla multiplebgs backgroundsize borderimage borderradius boxshadow textshadow opacity cssanimations csscolumns cssgradients cssreflections csstransforms csstransforms3d csstransitions fontface video audio localstorage sessionstorage webworkers applicationcache svg inlinesvg smil svgclippaths"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta charset="UTF-8">
+
+	<title>Blurred Text</title>
+
+	<link rel="stylesheet" href="https://css-tricks.com/examples/BlurredText/css/style.css">
+
+	<style>
+
+    h2 {
+      color: black;
+      display: block;
+      padding: 20px;
+      font: bold 72px Helvetica;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+
+    .hovertown span {
+      -webkit-transition: all 0.9s ease;
+      -moz-transition:    all 0.9s ease;
+      -o-transition:      all 0.9s ease;
+      transition:         all 0.9s ease;
+    }
+    .hovertown span:hover {
+      text-shadow: 0 0 72px black;
+      color: transparent;
+      -webkit-transition: all 0.2s ease;
+      -moz-transition:    all 0.2s ease;
+      -o-transition:      all 0.2s ease;
+      transition:         all 0.2s ease;
+    }
+
+    @-webkit-keyframes blackblur {
+      from { text-shadow: 0 0 72px black; color: transparent; }
+      to   { text-shadow: 0;              color: black;       }
+    }
+
+	.smokemonster span:nth-of-type(1)  { -webkit-animation: blackblur 2s       1 alternate; }
+	.smokemonster span:nth-of-type(2)  { -webkit-animation: blackblur 2s 0.1s  1 alternate; }
+	.smokemonster span:nth-of-type(3)  { -webkit-animation: blackblur 2s 0.15s 1 alternate; }
+	.smokemonster span:nth-of-type(4)  { -webkit-animation: blackblur 2s 0.2s  1 alternate; }
+	.smokemonster span:nth-of-type(5)  { -webkit-animation: blackblur 2s 0.25s 1 alternate; }
+	.smokemonster span:nth-of-type(6)  { -webkit-animation: blackblur 2s 0.3s  1 alternate; }
+	.smokemonster span:nth-of-type(7)  { -webkit-animation: blackblur 2s 0.35s 1 alternate; }
+	.smokemonster span:nth-of-type(8)  { -webkit-animation: blackblur 2s 0.4s  1 alternate; }
+	.smokemonster span:nth-of-type(9)  { -webkit-animation: blackblur 2s 0.45s 1 alternate; }
+	.smokemonster span:nth-of-type(10) { -webkit-animation: blackblur 2s 0.5s  1 alternate; }
+	.smokemonster span:nth-of-type(11) { -webkit-animation: blackblur 2s 0.55s 1 alternate; }
+	.smokemonster span:nth-of-type(12) { -webkit-animation: blackblur 2s 0.6s  1 alternate; }
+
+  	@-webkit-keyframes fun-1 {
+      from { text-shadow: 0 0 72px red; color: transparent; }
+      to   { text-shadow: 0;            color: black;       }
+    }
+    @-webkit-keyframes fun-2 {
+      from { text-shadow: 0 0 22px blue; color: transparent; }
+      to   { text-shadow: 0;            color: black;        }
+    }
+    @-webkit-keyframes fun-3 {
+      from { text-shadow: 0 0 152px green; color: transparent; }
+      to   { text-shadow: 0;            color: black;          }
+    }
+    @-webkit-keyframes fun-4 {
+      from { text-shadow: 0 0 102px cyan; color: transparent; }
+      to   { text-shadow: 0;            color: black;         }
+    }
+    @-webkit-keyframes fun-5 {
+      from { text-shadow: 0 0 222px magenta; color: transparent; }
+      to   { text-shadow: 0;            color: black;            }
+    }
+    @-webkit-keyframes fun-6 {
+      from { text-shadow: 0 0 92px yellow; color: transparent; }
+      to   { text-shadow: 0;            color: black;          }
+    }
+    .sparklemaster { color: white; }
+    .sparklemaster span:nth-of-type(1)  { -webkit-animation: fun-1 2s 0.2s  1 alternate; }
+    .sparklemaster span:nth-of-type(2)  { -webkit-animation: fun-2 2s 3.9s  1 alternate; }
+    .sparklemaster span:nth-of-type(3)  { -webkit-animation: fun-3 2s 2.65s 1 alternate; }
+    .sparklemaster span:nth-of-type(4)  { -webkit-animation: fun-4 2s 2.2s  1 alternate; }
+    .sparklemaster span:nth-of-type(5)  { -webkit-animation: fun-5 2s 1.25s 1 alternate; }
+    .sparklemaster span:nth-of-type(6)  { -webkit-animation: fun-6 2s 2.3s  1 alternate; }
+    .sparklemaster span:nth-of-type(7)  { -webkit-animation: fun-1 2s 3.35s 1 alternate; }
+    .sparklemaster span:nth-of-type(8)  { -webkit-animation: fun-2 2s 2.4s  1 alternate; }
+    .sparklemaster span:nth-of-type(9)  { -webkit-animation: fun-3 2s 1.45s 1 alternate; }
+    .sparklemaster span:nth-of-type(10) { -webkit-animation: fun-4 2s 3.5s  1 alternate; }
+    .sparklemaster span:nth-of-type(11) { -webkit-animation: fun-5 2s 1.55s 1 alternate; }
+    .sparklemaster span:nth-of-type(12) { -webkit-animation: fun-6 2s 2.6s  1 alternate; }
+
+  	.textshadow .foreverblur {
+  	   text-shadow: 0 0 32px white;
+  	   color: transparent;
+  	}
+
+  	#jquerybuddy span {
+  	   text-shadow: 0 0 4px rgba(0,100,0,1);
+  	   color: transparent;
+  	}
+	</style>
+	<script src="./Blurred Text_files/jquery.min.js"></script><style type="text/css"></style>
+	<script src="./Blurred Text_files/jquery.lettering.js"></script>
+	<script src="./Blurred Text_files/modernizr-1.7.min.js"></script>
+	<script src="./Blurred Text_files/color.js"></script>
+	<script src="./Blurred Text_files/textshadow.js"></script>
+
+	<script>
+	 $(function() {
+
+	  // apply spans
+      $("h2").lettering();
+
+      // hack to get animations to run again
+      $(".redraw").click(function() {
+        var el = $(this),
+           prev = el.prev(),
+           newone = prev.clone();
+        el.before(newone);
+        $("." + prev.attr("class") + ":first").remove();
+      });
+
+
+		var text = $("#jquerybuddy"),
+		  numLetters = text.find("span").length;
+
+		function randomBlurize() {
+		text.find("span:nth-child(" + (Math.floor(Math.random()*numLetters)+1) + ")")
+		    .animate({
+		      'textShadowBlur': Math.floor(Math.random()*25)+4,
+		      'textShadowColor': 'rgba(0,100,0,' + (Math.floor(Math.random()*200)+55) + ')'
+		    });
+		// Call itself recurssively
+		setTimeout(randomBlurize, 100);
+		} // Call once
+		randomBlurize();
+
+	 });
+	</script>
+</head>
+
+<body>
+
+<div id="demo-top-bar">
+
+  <div id="demo-bar-inside">
+
+    <h2 id="demo-bar-badge"><span class="char1">
+</span><span class="char2"> </span><span class="char3"> </span><span class="char4"> </span><span class="char5"> </span><span class="char6"> </span><span class="char7"> </span><span class="char8">C</span><span class="char9">S</span><span class="char10">S</span><span class="char11">-</span><span class="char12">T</span><span class="char13">r</span><span class="char14">i</span><span class="char15">c</span><span class="char16">k</span><span class="char17">s</span><span class="char18"> </span><span class="char19">E</span><span class="char20">x</span><span class="char21">a</span><span class="char22">m</span><span class="char23">p</span><span class="char24">l</span><span class="char25">e</span><span class="char26">
+</span><span class="char27"> </span><span class="char28"> </span><span class="char29"> </span><span class="char30"> </span></h2>
+
+    <div id="demo-bar-buttons">
+          </div>
+
+  </div>
+
+</div>
+	<section>
+
+    <h2 class="smokemonster"><span class="char1">S</span><span class="char2">m</span><span class="char3">o</span><span class="char4">k</span><span class="char5">e</span><span class="char6">m</span><span class="char7">o</span><span class="char8">n</span><span class="char9">s</span><span class="char10">t</span><span class="char11">e</span><span class="char12">r</span></h2>
+    <input class="redraw" type="button" value="redraw">
+
+	</section>
+
+	<section>
+
+    
+    <h2 class="sparklemaster"><span class="char1">S</span><span class="char2">p</span><span class="char3">a</span><span class="char4">r</span><span class="char5">k</span><span class="char6">l</span><span class="char7">e</span><span class="char8">m</span><span class="char9">a</span><span class="char10">s</span><span class="char11">t</span><span class="char12">e</span><span class="char13">r</span></h2><input class="redraw" type="button" value="redraw">
+
+	</section>
+
+	<section>
+
+	  <h2 class="hovertown"><span class="char1">H</span><span class="char2">o</span><span class="char3">v</span><span class="char4">e</span><span class="char5">r</span><span class="char6">t</span><span class="char7">o</span><span class="char8">w</span><span class="char9">n</span></h2>
+
+	</section>
+
+	<section>
+
+	  <h2 class="foreverblur"><span class="char1">M</span><span class="char2">o</span><span class="char3">d</span><span class="char4">e</span><span class="char5">r</span><span class="char6">n</span><span class="char7">i</span><span class="char8">z</span><span class="char9">b</span><span class="char10">l</span><span class="char11">u</span><span class="char12">r</span></h2>
+
+	</section>
+
+	<section>
+
+	  <h2 id="jquerybuddy"><span class="char1" style="text-shadow: rgb(0, 100, 0) 0px 0px 22.9758434295654px;">F</span><span class="char2" style="text-shadow: rgb(0, 100, 0) 0px 0px 26.2811527252197px;">r</span><span class="char3" style="text-shadow: rgb(0, 100, 0) 0px 0px 23.7056846618652px;">i</span><span class="char4" style="text-shadow: rgb(0, 100, 0) 0px 0px 14px;">n</span><span class="char5" style="text-shadow: rgb(0, 100, 0) 0px 0px 12px;">g</span><span class="char6" style="text-shadow: rgb(0, 100, 0) 0px 0px 9px;">e</span><span class="char7" style="text-shadow: rgb(0, 100, 0) 0px 0px 13px;">D</span><span class="char8" style="text-shadow: rgb(0, 100, 0) 0px 0px 11px;">i</span><span class="char9" style="text-shadow: rgb(0, 100, 0) 0px 0px 15px;">v</span><span class="char10" style="text-shadow: rgb(0, 100, 0) 0px 0px 24px;">i</span><span class="char11" style="text-shadow: rgb(0, 100, 0) 0px 0px 16.2018909454346px;">s</span><span class="char12" style="text-shadow: rgb(0, 100, 0) 0px 0px 25px;">i</span><span class="char13" style="text-shadow: rgb(0, 100, 0) 0px 0px 14px;">o</span><span class="char14" style="text-shadow: rgb(0, 100, 0) 0px 0px 5px;">n</span></h2>
+
+	</section>
+
+ <style type="text/css" style="display: none !important;">
+	* {
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		overflow-x: hidden;
+	}
+	#demo-top-bar {
+		text-align: left;
+		background: #222;
+		position: relative;
+		zoom: 1;
+		width: 100% !important;
+		z-index: 6000;
+		padding: 20px 0 20px;
+	}
+	#demo-bar-inside {
+		width: 960px;
+		margin: 0 auto;
+		position: relative;
+		overflow: hidden;
+	}
+	#demo-bar-buttons {
+		padding-top: 10px;
+		float: right;
+	}
+	#demo-bar-buttons a {
+		font-size: 12px;
+		margin-left: 20px;
+		color: white;
+		margin: 2px 0;
+		text-decoration: none;
+		font: 14px "Lucida Grande", Sans-Serif !important;
+	}
+	#demo-bar-buttons a:hover,
+	#demo-bar-buttons a:focus {
+		text-decoration: underline;
+	}
+	#demo-bar-badge {
+		display: inline-block;
+		width: 302px;
+		padding: 0 !important;
+		margin: 0 !important;
+		background-color: transparent !important;
+	}
+	#demo-bar-badge a {
+		display: block;
+		width: 100%;
+		height: 38px;
+		border-radius: 0;
+		bottom: auto;
+		margin: 0;
+		background: url(/images/examples-logo.png) no-repeat;
+		background-size: 100%;
+		overflow: hidden;
+		text-indent: -9999px;
+	}
+	#demo-bar-badge:before, #demo-bar-badge:after {
+		display: none !important;
+	}
+</style>
+
+
+</body></html>
