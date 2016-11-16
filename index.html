@@ -222,7 +222,7 @@
 
 	<!--=====================-->
 	<!--The second Page-->
-	<div class="col-xs-12" id="page2" style="background-color:#404040; min-height:99.5vh; visibility:hidden">
+	<div class="col-xs-12" id="page2" style="background-color:#404040; min-height:99.5vh; display:none;">
 		<!--=====================-->
 		<!--This is the title-->
 		<div class="col-sm-12">
@@ -255,7 +255,7 @@
 
 	<!--=====================-->
 	<!--The third Page-->
-	<div class="col-xs-12" id="page3" style="background-color:#bbbbbb; min-height:99.5vh;visibility:hidden;">
+	<div class="col-xs-12" id="page3" style="background-color:#bbbbbb; min-height:99.5vh; display:none;">
 		<div class="col-xs-12" style="text-align: center; letter-spacing:10px;color:#404040;font-size: 4em;">
 			Directors
 		</div>
@@ -401,7 +401,7 @@
 		</div>
 
 	</div>
-	<div class="col-sm-12" id="page4" style="background-color:#303030; min-height:99.5vh; visibility:hidden">
+	<div class="col-sm-12" id="page4" style="background-color:#303030; min-height:99.5vh; display:none;">
 		<div class="col-sm-12">
 			<div class="blur Title" style="color:#808080; font-size: 6vw;">
 				<span>W</span><span>O</span><span>R</span><span>K</span>
@@ -474,7 +474,7 @@
     		<img src="pic/1.jpg" style="width:100%;">
     	</div>
 	</div>
-	<div class="col-sm-12" id="page5" style="background-color:#303030; min-height:99.5vh; visibility:hidden">
+	<div class="col-sm-12" id="page5" style="background-color:#303030; min-height:99.5vh; display:none;">
 
 		<div class="col-sm-12">
 			<div class="blur Title" style="color:#808080; font-size: 6vw;">
@@ -511,7 +511,8 @@
 	{
 		if(curVis!=null && curVis!=theId)
 		{
-			functionRunning=true;
+			functionRunning=true
+
 			$(curVis).fadeOut(250);
 			$(theId).fadeIn(250);
 			curVis=theId;
